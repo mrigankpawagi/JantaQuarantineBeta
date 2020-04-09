@@ -44,7 +44,66 @@
                     <i class="material-icons">track_changes</i>
                 </button>
             </div>
+            <p>Try entering <span id="sampleRandomString"></span></p>
+            <hr>
+            <div class="row">
+              <button class="btn-large waves-effect deep-purple darken-4 col s12 waves-light" id="nearestButton">
+                <b>Find Nearest Quarantine Facility</b>
+              </button>
             </div>
+            <ul class="collection" id="facilityList">
+              <li class="collection-item avatar">
+                <i class="material-icons circle red">local_hospital</i>
+                <span class="title">Orange Tree Hotel</span>
+                <p>Sector - 101<br>
+                   Noida, Uttar Pradesh
+                </p>
+                
+              </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle red">local_hospital</i>
+                <span class="title">Shanti Vihar Community Center</span>
+                <p>Sector - 80<br>
+                  Noida, Uttar Pradesh
+                </p>
+              </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle red">local_hospital</i>
+                <span class="title">Rama Guest House</span>
+                <p>Sector - 98<br>
+                  Noida, Uttar Pradesh
+                </p>
+                
+              </li>
+              </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle red">local_hospital</i>
+                <span class="title">Gyan Public School</span>
+                <p>Barakhamba<br>
+                  New Delhi, Delhi
+                </p>
+                
+              </li>
+            </li>
+              </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle red">local_hospital</i>
+                <span class="title">KK Rooms</span>
+                <p>Gamma - 3<br>
+                  Greater Noida, Uttar Pradesh
+                </p>
+                </li>
+            </li>
+            <li class="collection-item avatar">
+              <i class="material-icons circle red">local_hospital</i>
+              <span class="title">Marigold Residence</span>
+              <p>Sector - 46<br>
+                Noida, Uttar Pradesh
+              </p>
+              
+            </li>
+            </ul>
+          </div>
       </div>
       <div id="volunteer" class="segment">
           <div class="container">
@@ -58,14 +117,123 @@
       </div>
 
       <div class="fixed-action-btn">
-          <a id="announce" class="waves-effect waves-light btn-large btn-floating red pulse" ><i class="material-icons">announcement</i></a>
+        <a id="announce" class="waves-effect waves-light btn-large btn-floating red pulse" ><i class="material-icons">announcement</i></a>
+    </div>
+    <div class="tap-target white-text deep-purple darken-4" data-target="announce">
+      <div class="tap-target-content">
+        <h5>Welcome to <b>Janta Quarantine</b></h5>
+        <p>This is a demonstration version of our portal. Feel free to click your way around and see how it will work.</p>
       </div>
-      <div class="tap-target white-text deep-purple darken-4" data-target="announce">
-        <div class="tap-target-content">
-          <h5>Welcome to <b>Janta Quarantine</b></h5>
-          <p>This is a demonstration version of our portal. Feel free to click your way around and see how it will work.</p>
-        </div>
+    </div>
+    <div class="fixed-action-btn" id="ContactUsBtnWrap">
+        <a id="contactUsBtn" class="waves-effect waves-light btn btn-floating green modal-trigger" href="#contactModal">
+          <i class="material-icons">call</i>
+        </a>
+    </div>
+    <div id="trackModal" class="modal">
+      <div class="modal-content">
+        <h4>Track Patient</h4>
+        <p>A bunch of text</p>
       </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <h4>Contact for Help</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+    <div id="facilityModal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <b><h4></h4></b>
+          <p>
+            <i class="material-icons">place</i>
+            <span id="facilityAddress"></span>
+          </p>
+          <hr>
+          <p>
+            <h6>
+              <i class="material-icons">hotel</i>
+              <b>Beds Available</b>
+            </h6>
+            <span><b>17 Beds</b> out of 28</span>
+          </p>
+          <br>
+          <p>
+            <h6>
+              <i class="material-icons">emoji_people</i>
+              <b>Work Force</b>
+            </h6>
+            <span><b>3 health workers</b> per bed</span>
+          </p>
+          <br>
+          <p>
+            <h6>
+              <i class="material-icons">commute</i>
+              <b>Distance</b>
+            </h6>
+            <span><b>2.7 km</b> away</span>
+          </p>
+          <br>
+          <p>
+            <h6>
+              <i class="material-icons">check</i>
+              <b>Ambulance Available</b>
+            </h6>
+          </p>
+          <br>
+          <p>
+            <h6>
+              <i class="material-icons">enhanced_encryption</i>
+              <b>Other Facilites</b>
+            </h6>
+            <ul class="collection">
+              <li class="collection-item"><i class="material-icons">local_cafe</i> Catering</li>
+              <li class="collection-item"><i class="material-icons">local_laundry_service</i> Clothing and Laundry</li>
+              <li class="collection-item"><i class="material-icons">wc</i> Restrooms</li>
+            </ul>
+          </p>
+          <br>
+          <p>
+            <h6>
+              <i class="material-icons">rate_review</i>
+              <b>Feedback</b>
+            </h6>
+            <ul class="collection" id="facilityFeedback">
+              <li class="collection-item avatar">
+                <i class="material-icons circle blue">account_circle</i>
+                <span class="title">Ram Prasad</span>
+                <p>Excellent Facility!</p>
+              </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle blue">account_circle</i>
+                <span class="title">Jyoti Kumar</span>
+                <p>Great staff!</p>
+              </li>
+            </ul>
+          </p>
+
+          
+      </div>
+      <div class="modal-footer">
+        <a class="modal-close waves-effect waves-green btn blue darken-1 white-text waves-effect modal-trigger" href="#quarantineModal">Quarantine</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+    <div id="quarantineModal" class="modal">
+      <div class="modal-content">
+        <h4>Quarantine</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>

@@ -6,11 +6,22 @@
     padding: 0;
 }
 
+hr{
+    display: block;
+    width: 50%;
+    margin: 25px auto;
+    border: 1px solid var(--theme);
+    background: var(--theme);
+}
+b *{
+    font-weight: bolder!important;
+}
+
 #loader{
     position: fixed;
     width: 100%;
     height: 100%;
-    z-index: 99999;
+    z-index: 9999;
     padding-top: 50px;
 }
 #loader > *{
@@ -55,4 +66,22 @@ button i.material-icons{
 }
 button#track {
     margin-bottom: 7px;
+}
+#ContactUsBtnWrap{
+    right: 31px;
+    bottom: 89px;
+}
+
+.modal-content i{
+    line-height: 0;
+    top: 0.5rem;
+    position: relative;
+}
+
+#facilityFeedback li.collection-item{
+    min-height: 64px;
+}
+
+#facilityList li{
+    cursor: pointer;
 }

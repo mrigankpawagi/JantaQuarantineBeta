@@ -1,7 +1,16 @@
-function load(time=300){
-    $('#loader').fadeIn(time);
+function load(time=150, delay=0){
+    $('#loader').delay(delay).fadeIn(time);   
 }
-function unload(time=300){
-    $('#loader').fadeOut(300);
+function unload(time=150, delay=0){
+    $('#loader').delay(delay).fadeOut(time); 
+}
+function toaster(text, color='white'){
+    M.toast({html: '<span class="' + color + '-text">' + text + '</span>'});
+}
+function randomString(length, chars='0123456789ABCDEFGHIJKLMNOPQRSTUVWXY') {
+    var result = '';
+    for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+    return result;
 }
 M.AutoInit();
+$("#sampleRandomString").text(randomString(10));
