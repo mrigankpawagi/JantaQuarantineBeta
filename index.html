@@ -130,13 +130,92 @@
           <i class="material-icons">call</i>
         </a>
     </div>
-    <div id="trackModal" class="modal">
+    <div id="trackModal" class="modal-fixed-footer modal">
       <div class="modal-content">
-        <h4>Track Patient</h4>
-        <p>A bunch of text</p>
+        <h4><b>Track Patient</b></h4>
+        <br><br>
+        <p class="center">
+          <i class="material-icons large">portrait</i>
+          <br>
+          <h6 class="center"><b>Gopal Das</b></h6>
+          <p id="pid" class="center">19DMPA910P</p>
+        </p>
+        <hr>
+        <div class="row">
+          <button class="btn-large waves-effect green col s12" onclick="toaster('Calling Patient.', 'green');">
+            <i class="material-icons">call</i> 
+            <b>Call Patient</b>
+          </button>
+        </div>
+        <p>
+          <h6>
+            <i class="material-icons">place</i>
+            <b>Quarantined at</b>
+          </h6>
+          <span>Rama Guest House</span>
+        </p><br>
+        <p>
+          <h6>
+            <i class="material-icons">date_range</i>
+            <b>Quarantined Since</b>
+          </h6>
+          <span id="dateSince"></span>
+        </p>
+        <br>
+        <p>
+          <h6>
+            <i class="material-icons">event_note</i>
+            <b>Daily Condition</b>
+          </h6>
+        </p>
+        <br>
+        <ul class="collapsible popout">
+          <li class="active">
+            <div class="collapsible-header"><i class="material-icons green-text">today</i>Day 6</div>
+            <div class="collapsible-body">
+              <p><b>Condition</b>: Curing</p>
+              <p><b>Sympoms</b>: Coughing</p>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons orange-text">today</i>Day 5</div>
+            <div class="collapsible-body">
+              <p><b>Condition</b>: Curing</p>
+              <p><b>Sympoms</b>: Coughing, Nausea, Mild Fever</p>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons green-text">today</i>Day 4</div>
+            <div class="collapsible-body">
+              <p><b>Condition</b>: Curing</p>
+              <p><b>Sympoms</b>: Coughing, Mild Fever</p>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons orange-text">today</i>Day 3</div>
+            <div class="collapsible-body">
+              <p><b>Condition</b>: Curing</p>
+              <p><b>Sympoms</b>: Coughing, Mild Fever</p>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons orange-text">today</i>Day 2</div>
+            <div class="collapsible-body">
+              <p><b>Condition</b>: Severe, not critical</p>
+              <p><b>Sympoms</b>: Coughing, Tiredness, Mild Fever</p>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons red-text">today</i>Day 1</div>
+            <div class="collapsible-body">
+              <p><b>Condition</b>: Severe, not critical</p>
+              <p><b>Sympoms</b>: Coughing, Tiredness, Mild Fever</p>
+            </div>
+          </li>
+        </ul>
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
       </div>
     </div>
     <div id="contactModal" class="modal">
@@ -225,13 +304,64 @@
         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
       </div>
     </div>
-    <div id="quarantineModal" class="modal">
+    <div id="quarantineModal" class="modal modal-fixed-footer">
       <div class="modal-content">
-        <h4>Quarantine</h4>
-        <p>A bunch of text</p>
-      </div>
+        <h4><b>Quarantine</b></h4>
+        <p>Fill the form below to register yourself for quarantine.</p>
+        <br>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="qForm_name" type="text" class="validate">
+            <label for="qForm_name">Name</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">phone</i>
+            <input id="qForm_telephone" type="tel" class="validate">
+            <label for="qForm_telephone">Phone Number</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">pin_drop</i>
+            <input id="qForm_address" type="text" class="validate">
+            <label for="qForm_address">Address</label>
+          </div>
+        </div>
+        <br>
+        <p>
+          <i class="material-icons">public</i>
+          <b>Did you travel overseas recently?</b>
+          <br><br>
+          <form class="black-text">
+            <p>
+              <label>
+                <input name="qForm_travel" type="radio" />
+                <span>Yes</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="qForm_travel" type="radio" checked />
+                <span>No</span>
+              </label>
+            </p>
+          </form>
+          <br><br>
+          <b>If yes, when did you return?</b>
+          <br>
+          <div class="row">
+            <div class="input-field">
+              <i class="material-icons prefix">event</i>
+              <input type="text" class="datepicker" id="qForm_travelDate">
+              <label for="qForm_travelDate">Select Date</label>
+            </div>
+          </div>
+        </p>
+        </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn waves-effect blue">Submit</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
       </div>
     </div>
 

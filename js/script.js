@@ -10,6 +10,8 @@ $('#track').click(function(){
         toaster('Please enter a Tracking ID.', 'red')
     }
     else{
+        var id = $('#trackingID_field').val().replace(/ /gi, '');
+        $("#trackModal #pid").text(id);
         load();
         var delay = Math.random()*3000+2000;
         unload(300, delay);
@@ -36,3 +38,4 @@ $("#nearestButton").click(function(){
     unload(300, delay);
     $('#facilityModal').delay(delay).modal('open');
 });
+

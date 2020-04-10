@@ -14,3 +14,6 @@ function randomString(length, chars='0123456789ABCDEFGHIJKLMNOPQRSTUVWXY') {
 }
 M.AutoInit();
 $("#sampleRandomString").text(randomString(10));
+$('#trackModal #dateSince').text(new Date(new Date() - 1000 * 60 * 60 * 24 * 6).toLocaleDateString());
+
+$('#quarantineModal').modal('open');

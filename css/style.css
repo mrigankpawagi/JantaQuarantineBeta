@@ -13,8 +13,11 @@ hr{
     border: 1px solid var(--theme);
     background: var(--theme);
 }
-b *{
+b, b *{
     font-weight: bolder!important;
+}
+.black-text, .black-text *{
+    color: #000!important;
 }
 
 #loader{
@@ -84,4 +87,8 @@ button#track {
 
 #facilityList li{
     cursor: pointer;
+}
+
+.input-field > i.material-icons{
+    line-height: initial;
 }
