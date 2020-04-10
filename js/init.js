@@ -13,7 +13,11 @@ function randomString(length, chars='0123456789ABCDEFGHIJKLMNOPQRSTUVWXY') {
     return result;
 }
 M.AutoInit();
+M.Datepicker.init(document.querySelectorAll('.datepicker'), {'container': $('#lastElem').eq(0)});
 $("#sampleRandomString").text(randomString(10));
 $('#trackModal #dateSince').text(new Date(new Date() - 1000 * 60 * 60 * 24 * 6).toLocaleDateString());
 
-$('#quarantineModal').modal('open');
+/*$('#quarantine').hide();
+$('#others').show();*/
+
+unload();

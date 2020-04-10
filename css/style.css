@@ -92,3 +92,12 @@ button#track {
 .input-field > i.material-icons{
     line-height: initial;
 }
+
+.contactUs_btns{
+    font-size: 1.3rem;
+}
+
+.twitter-tweet {
+    margin: auto;
+    max-width: calc(100% - 20px)!important;
+}

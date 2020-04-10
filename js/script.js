@@ -1,5 +1,3 @@
-unload();
-
 $('#announce').click(function(){
     $('.tap-target').tapTarget('open');
     $('#announce').removeClass('pulse');
@@ -38,4 +36,8 @@ $("#nearestButton").click(function(){
     unload(300, delay);
     $('#facilityModal').delay(delay).modal('open');
 });
-
+$("#qForm_submit").click(function(){
+    toaster('Information submitted.<br>We will call you shortly.', 'green');        load();
+    var delay = Math.random()*1000+2000;
+    unload(300, delay);
+});
