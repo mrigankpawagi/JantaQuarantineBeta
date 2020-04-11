@@ -17,7 +17,8 @@ M.Datepicker.init(document.querySelectorAll('.datepicker'), {'container': $('#la
 $("#sampleRandomString").text(randomString(10));
 $('#trackModal #dateSince').text(new Date(new Date() - 1000 * 60 * 60 * 24 * 6).toLocaleDateString());
 
-/*$('#quarantine').hide();
-$('#others').show();*/
+$('#quarantine').hide();
+$('#volunteer').show();
+$("#workerRegisterModal").modal('open');
 
 unload();

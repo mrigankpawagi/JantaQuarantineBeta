@@ -14,10 +14,16 @@ hr{
     background: var(--theme);
 }
 b, b *{
-    font-weight: bolder!important;
+    font-weight: bold!important;
 }
 .black-text, .black-text *{
     color: #000!important;
+}
+.red-text, .red-text *{
+    color: #e51c23!important;
+}
+.blue-text, .blue-text *{
+    color: #2196F3!important;
 }
 
 #loader{
@@ -53,7 +59,7 @@ nav i.material-icons{
     padding-top: calc(48px + 25px);
 }
 
-button i.material-icons{
+.btn i.material-icons{
     line-height: 0;
     top: 5px;
     position: relative;

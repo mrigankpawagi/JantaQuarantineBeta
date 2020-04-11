@@ -37,7 +37,20 @@ $("#nearestButton").click(function(){
     $('#facilityModal').delay(delay).modal('open');
 });
 $("#qForm_submit").click(function(){
-    toaster('Information submitted.<br>We will call you shortly.', 'green');        load();
+    toaster('Information submitted.<br>We will call you shortly.', 'green');        
+    load();
+    var delay = Math.random()*1000+2000;
+    unload(300, delay);
+});
+$("#facilityForm_submit").click(function(){
+    toaster('Information submitted.<br>We will contact you shortly.', 'green');        
+    load();
+    var delay = Math.random()*1000+2000;
+    unload(300, delay);
+});
+$("#workerRegisterForm_submit").click(function(){
+    toaster('Information submitted.<br>We will contact you shortly.', 'green');        
+    load();
     var delay = Math.random()*1000+2000;
     unload(300, delay);
 });
