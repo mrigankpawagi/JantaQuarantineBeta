@@ -107,3 +107,9 @@ button#track {
     margin: auto;
     max-width: calc(100% - 20px)!important;
 }
+
+#track i.material-icons{
+    line-height: 0;
+    position: relative;
+    top: 5px;
+}
